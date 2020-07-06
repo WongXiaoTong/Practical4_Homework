@@ -23,31 +23,31 @@ public class MainActivity extends AppCompatActivity {
                 if (checked)
                     // Same day service
                     displayToast(getString(
-                            R.string.chocolate_syrup));
+                            R.string.toast1));
                 break;
             case R.id.sprinkles:
                 if (checked)
                     // Next day delivery
                     displayToast(getString(
-                            R.string.sprinkles));
+                            R.string.toast2));
                 break;
             case R.id.crushed_nuts:
                 if (checked)
                     // Pick up
                     displayToast(getString(
-                            R.string.crushed_nuts));
+                            R.string.toast3));
                 break;
             case R.id.cherries:
                 if (checked)
                     // Pick up
                     displayToast(getString(
-                            R.string.cherries));
+                            R.string.toast4));
                 break;
             case R.id.orio:
                 if (checked)
                     // Pick up
                     displayToast(getString(
-                            R.string.orio_cookie));
+                            R.string.toast5));
                 break;
             default:
                 // Do nothing.
