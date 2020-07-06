@@ -1,11 +1,11 @@
 package com.example.practical4_homework;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
-import android.widget.CheckBox;
+import android.widget.Checkable;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -15,47 +15,42 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onCheckBoxClicked(View view) {
-        boolean checked = ((CheckBox) view).isChecked();
-        // Check which radio button was clicked.
-        switch (view.getId()) {
-            case R.id.chocolate_syrup:
-                if (checked)
-                    // Same day service
-                    displayToast(getString(
-                            R.string.toast1));
-                break;
-            case R.id.sprinkles:
-                if (checked)
-                    // Next day delivery
-                    displayToast(getString(
-                            R.string.toast2));
-                break;
-            case R.id.crushed_nuts:
-                if (checked)
-                    // Pick up
-                    displayToast(getString(
-                            R.string.toast3));
-                break;
-            case R.id.cherries:
-                if (checked)
-                    // Pick up
-                    displayToast(getString(
-                            R.string.toast4));
-                break;
-            case R.id.orio:
-                if (checked)
-                    // Pick up
-                    displayToast(getString(
-                            R.string.toast5));
-                break;
-            default:
-                // Do nothing.
-                break;
-        }
+    public void initializeUI() {
+        View chocolate_syrup = findViewById(R.id.chocolate_syrup);
+        View sprinkles = findViewById(R.id.sprinkles);
+        View orio_cookies = findViewById(R.id.orio);
+        View cherries = findViewById(R.id.cherries);
+        View crushed_nuts = findViewById(R.id.crushed_nuts);
     }
 
-    public void displayToast(String message) {
+    public void onShowToastClicked(View view) {
+        String message = "Toppings: ";
+
+        Checkable chocolate_syrup = null;
+        if (chocolate_syrup.isChecked())
+            message += getString(R.string.chocolate_syrup) + " ";
+
+        Checkable sprinkles = null;
+        if (sprinkles.isChecked())
+            message += getString(R.string.sprinkles) + " ";
+
+        Checkable crushed_nuts = null;
+        if (crushed_nuts.isChecked())
+            message += getString(R.string.crushed_nuts) + " ";
+
+        Checkable cherries = null;
+        if (cherries.isChecked())
+            message += getString(R.string.cherries) + " ";
+
+        Checkable orio = null;
+        if (orio.isChecked())
+            message += getString(R.string.orio_cookie) + " ";
+
+        displayToast(message);
+
+    }
+
+    private void displayToast(String message) {
         Toast.makeText(getApplicationContext(), message,
                 Toast.LENGTH_SHORT).show();
     }

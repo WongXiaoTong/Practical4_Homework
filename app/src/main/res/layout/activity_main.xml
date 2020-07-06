@@ -13,7 +13,6 @@
         android:text="@string/chocolate_syrup"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="67dp"
-        android:onClick="onCheckBoxClicked"
         app:layout_constraintStart_toStartOf="parent"
         tools:ignore="MissingConstraints" />
 
@@ -24,7 +23,6 @@
         android:text="@string/sprinkles"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="117dp"
-        android:onClick="onCheckBoxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/chocolate_syrup"/>
 
@@ -35,7 +33,6 @@
         android:text="@string/crushed_nuts"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="168dp"
-        android:onClick="onCheckBoxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sprinkles"/>
 
@@ -47,7 +44,6 @@
         android:checked="true"
         tools:layout_editor_absoluteX="34dp"
         tools:layout_editor_absoluteY="217dp"
-        android:onClick="onCheckBoxClicked"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/crushed_nuts"/>
 
@@ -55,7 +51,6 @@
         android:id="@+id/orio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onCheckBoxClicked"
         android:text="@string/orio_cookie"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cherries" />
@@ -64,11 +59,10 @@
         android:id="@+id/show_toast"
         android:layout_width="124dp"
         android:layout_height="43dp"
+        android:onClick="onShowToastClicked"
         android:text="@string/show_toast"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="245dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/orio"/>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
