@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 StringBuffer result = new StringBuffer();
-                result.append("Topping :");
+                result.append("Toppings:");
                 if(chocolate_syrup.isChecked()){
                     result.append("\t" + chocolate_syrup.getText().toString());
                 }
